@@ -1,0 +1,32 @@
+<script>
+    const stususn = 0.80926;
+    function play(freq_inv_stususn) {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        // create Oscillator node
+        const oscillator = audioCtx.createOscillator();
+
+        oscillator.type = "square";
+        oscillator.frequency.setValueAtTime(freq_inv_stususn / stususn, audioCtx.currentTime);
+        oscillator.connect(audioCtx.destination);
+        oscillator.start();
+        setTimeout(() => {
+            oscillator.stop();
+        }, stususn * 1000);
+    }
+</script>
+
+<body>
+    <script>
+        const pitch_class = "一犬二猫三混叮四男五米六";
+        let ans = "";
+        for (let octave = 0; octave < 3; octave++) {
+            ans += "<p>"
+            for (let i = 0; i < 12; i++) {
+                ans += `<img src="bordered/${pitch_class[i]}.png" width="50" onclick="play(243 * Math.pow(2, ${octave}) * Math.pow(2, ${i}/12))">`
+            }
+            ans += "</p>"
+        }
+        document.write(ans);
+    </script>
+</body>
