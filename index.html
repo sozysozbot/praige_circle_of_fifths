@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="utf-8">
     <script>
         const stususn = 0.80926;
         function play(freq_inv_stususn) {
             const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    
+
             // create Oscillator node
             const oscillator = audioCtx.createOscillator();
-    
+
             oscillator.type = "square";
             oscillator.frequency.setValueAtTime(freq_inv_stususn / stususn, audioCtx.currentTime);
             oscillator.connect(audioCtx.destination);
@@ -17,50 +18,83 @@
                 oscillator.stop();
             }, stususn * 1000);
         }
-    </script>    
+        function print(str, size) {
+            document.write([...str].map(s => `<img src="no_bordered/${s}.png" height="${size}" />`).join(""));
+        }
+    </script>
 </head>
+
 <body>
-<p>tut1 tu2 su1 cen1 ik2 kit1 ap1 om2 pit1<br>
-毎遊銭cen1二百四三震</p>
-<img src="243.png" height="80" onclick="play(243)">
-<hr>
+    <!-- <p>tut1 tu2 su1 cen1 ik2 kit1 ap1 om2 pit1<br>
+毎遊銭cen1二百四三震</p>-->
+    <script>print("毎stususn二百四三震", 16)</script><br>
 
-<p>tut1 tu2 su1 cen1 kit1 net2 nun1 ik2 pit1<br>
-毎遊銭cen1百六十二震</p>
-<img src="162.png" height="80"  onclick="play(162)">
-<hr>
+    <img src="243.png" height="80" onclick="play(243)">
+    <hr>
 
-<p>tut1 tu2 su1 cen1 ik2 kit1 nun1 net2 pit1<br>
-毎遊銭cen1二百十六震</p>
-<img src="216.png" height="106"  onclick="play(216)">
-<hr>
+    <!--<p>tut1 tu2 su1 cen1 kit1 net2 nun1 ik2 pit1<br>
+        毎遊銭cen1百六十二震</p>-->
+    <script>print("毎stususn百六十二震", 16)</script><br>
 
-<p>tut1 tu2 su1 cen1 kit1 ap1 nun1 ap1<br>
-毎遊銭cen1百四十四震</p>
-<img src="144.png" height="106"  onclick="play(144)">
-<hr>
+    <img src="162.png" height="80" onclick="play(162)">
+    <hr>
 
-<p>tut1 tu2 su1 cen1 kit1 nap1 nun1 ik2<br>
-毎遊銭cen1百九十二震</p>
-<img src="192.png" height="106"  onclick="play(192)">
-<hr>
+    <!--<p>tut1 tu2 su1 cen1 ik2 kit1 nun1 net2 pit1<br>
+        毎遊銭cen1二百十六震</p>-->
+    <script>print("毎stususn二百十六震", 16)</script><br>
+    <img src="216.png" height="106" onclick="play(216)">
+    <hr>
 
-<p>tut1 tu2 su1 cen1 kit1 ik2 nun1 nom2<br>
-毎遊銭cen1百二十八震</p>
-<img src="128.png" height="106" onclick="play(128)">
-<hr>
+    <!--<p>tut1 tu2 su1 cen1 kit1 ap1 nun1 ap1<br>
+        毎遊銭cen1百四十四震</p>-->
+    <script>print("毎stususn百四十四震", 16)</script><br>
+    <img src="144.png" height="106" onclick="play(144)">
+    <hr>
 
-<p>ka1 kak aim2 hop1 net2 cuop2 hem py zau cuop2 niek1.<br>
-此時在手六声即力為声連。</p>
+    <!--<p>tut1 tu2 su1 cen1 kit1 nap1 nun1 ik2<br>
+        毎遊銭cen1百九十二震</p>-->
+    <script>print("毎stususn百九十二震", 16)</script><br>
+    <img src="192.png" height="106" onclick="play(192)">
+    <hr>
 
-<table>
-    <tr><td>kit1 ik2 nun1 nom2 / 百二十八</td><td><img src="128.png" height="106" onclick="play(128)"></td></tr>
-    <tr><td>kit1 ap1 nun1 ap1 / 百四十四</td><td><img src="144.png" height="106"  onclick="play(144)"></td></tr>
-    <tr><td>kit1 net2 nun1 ik2 / 百六十二</td><td><img src="162.png" height="80"  onclick="play(162)"></td></tr>
-    <tr><td>kit1 nap1 nun1 ik2 / 百九十二</td><td><img src="192.png" height="106"  onclick="play(192)"></td></tr>
-    <tr><td>ik2 kit1 nun1 net2 / 二百十六</td><td><img src="216.png" height="106"  onclick="play(216)"></td></tr>
-    <tr><td>ik2 kit1 ap1 om2 / 二百四三</td><td><img src="243.png" height="80" onclick="play(243)"></td></tr>
-</table>
+    <!--<p>tut1 tu2 su1 cen1 kit1 ik2 nun1 nom2<br>
+        毎遊銭cen1百二十八震</p>-->
+    <script>print("毎stususn百二十八震", 16)</script><br>
+    <img src="128.png" height="106" onclick="play(128)">
+    <hr>
 
+    <!--<p>ka1 kak aim2 hop1 net2 cuop2 hem py zau cuop2 niek1.<br>
+        此時在手六声即力為声連。</p>-->
+    <script>print("此時在手六声即力為声連", 16)</script><br>
+    <table>
+        <tr>
+            <td><!--kit1 ik2 nun1 nom2 / 百二十八--><script>print("百二十八", 16)</script></td>
+            <td><img src="128.png" height="106" onclick="play(128)"></td>
+        </tr>
+        <tr>
+            <td><!--kit1 ap1 nun1 ap1 / 百四十四--><script>print("百四十四", 16)</script></td>
+            <td><img src="144.png" height="106" onclick="play(144)"></td>
+        </tr>
+        <tr>
+            <td><!--kit1 net2 nun1 ik2 / 百六十二--><script>print("百六十二", 16)</script></td>
+            <td><img src="162.png" height="80" onclick="play(162)"></td>
+        </tr>
+        <tr>
+            <td><!--kit1 nap1 nun1 ik2 / 百九十二--><script>print("百九十二", 16)</script></td>
+            <td><img src="192.png" height="106" onclick="play(192)"></td>
+        </tr>
+        <tr>
+            <td><!--ik2 kit1 nun1 net2 / 二百十六--><script>print("二百十六", 16)</script></td>
+            <td><img src="216.png" height="106" onclick="play(216)"></td>
+        </tr>
+        <tr>
+            <td><!--ik2 kit1 ap1 om2 / 二百四三--><script>print("二百四三", 16)</script></td>
+            <td><img src="243.png" height="80" onclick="play(243)"></td>
+        </tr>
+    </table>
+
+    <p><!--tui2 sin1 hem "et2" "ik2" "om2" "ap1" "un1" "net2".<br>-->
+        <script>print("与名即「一」␣「二」␣「三」␣「四」␣「五」␣「六」", 16);</script>
+    </p>
 
 </body>
