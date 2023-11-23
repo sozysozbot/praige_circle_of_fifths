@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <script>
         const stususn = 0.80926;
-        function play(freq_inv_stususn) {
+        function play(freq_inv_stususn, length_in_stususn = 1) {
             const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
             // create Oscillator node
@@ -16,7 +16,7 @@
             oscillator.start();
             setTimeout(() => {
                 oscillator.stop();
-            }, stususn * 1000);
+            }, stususn * 1000 * length_in_stususn);
         }
         function print(str, size) {
             document.write([...str].map(s => `<img src="no_bordered/${s}.png" height="${size}" />`).join(""));
@@ -25,6 +25,22 @@
 </head>
 
 <body>
+    <script>print("毎stususn一震", 16)</script><br>
+
+    <img src="1.png" height="80" onclick="play(0.5, 6)">
+    <hr>
+    <script>print("毎stususn三震", 16)</script><br>
+
+    <img src="3.png" height="80" onclick="play(1.5, 6)">
+    <hr>
+    <script>print("毎stususn九震", 16)</script><br>
+
+    <img src="9.png" height="80" onclick="play(4.5, 6)">
+    <hr>
+    <script>print("極急噫", 16)</script><br>
+    <script>print("而極極極急即如何", 16)</script><br>
+
+    <hr>
     <!-- <p>tut1 tu2 su1 cen1 ik2 kit1 ap1 om2 pit1<br>
 毎遊銭cen1二百四三震</p>-->
     <script>print("毎stususn二百四三震", 16)</script><br>
