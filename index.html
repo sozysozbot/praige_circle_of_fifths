@@ -19,7 +19,14 @@
             }, stususn * 1000 * length_in_stususn);
         }
         function print(str, size) {
-            document.write([...str].map(s => `<img src="no_bordered/${s}.png" height="${size}" />`).join(""));
+            document.write([...str].map(s => {
+                if (s >= "\u4e00" && s <= "\u9fff") {
+                    return `<a href="http://jurliyuuri.com/spoonfed_pekzep/char/${s}.html" target="_blank"><img src="no_bordered/${s}.png" height="${size}" /></a>`;
+                } else {
+                    return `<img src="no_bordered/${s}.png" height="${size}" />`;
+                }
+
+            }).join(""));
         }
     </script>
 </head>
@@ -84,27 +91,39 @@
     <script>print("此時在手六声即力為声連", 16)</script><br>
     <table>
         <tr>
-            <td><!--kit1 ik2 nun1 nom2 / 百二十八--><script>print("百二十八", 16)</script></td>
+            <td><!--kit1 ik2 nun1 nom2 / 百二十八-->
+                <script>print("百二十八", 16)</script>
+            </td>
             <td><img src="128.png" height="106" onclick="play(128)"></td>
         </tr>
         <tr>
-            <td><!--kit1 ap1 nun1 ap1 / 百四十四--><script>print("百四十四", 16)</script></td>
+            <td><!--kit1 ap1 nun1 ap1 / 百四十四-->
+                <script>print("百四十四", 16)</script>
+            </td>
             <td><img src="144.png" height="106" onclick="play(144)"></td>
         </tr>
         <tr>
-            <td><!--kit1 net2 nun1 ik2 / 百六十二--><script>print("百六十二", 16)</script></td>
+            <td><!--kit1 net2 nun1 ik2 / 百六十二-->
+                <script>print("百六十二", 16)</script>
+            </td>
             <td><img src="162.png" height="80" onclick="play(162)"></td>
         </tr>
         <tr>
-            <td><!--kit1 nap1 nun1 ik2 / 百九十二--><script>print("百九十二", 16)</script></td>
+            <td><!--kit1 nap1 nun1 ik2 / 百九十二-->
+                <script>print("百九十二", 16)</script>
+            </td>
             <td><img src="192.png" height="106" onclick="play(192)"></td>
         </tr>
         <tr>
-            <td><!--ik2 kit1 nun1 net2 / 二百十六--><script>print("二百十六", 16)</script></td>
+            <td><!--ik2 kit1 nun1 net2 / 二百十六-->
+                <script>print("二百十六", 16)</script>
+            </td>
             <td><img src="216.png" height="106" onclick="play(216)"></td>
         </tr>
         <tr>
-            <td><!--ik2 kit1 ap1 om2 / 二百四三--><script>print("二百四三", 16)</script></td>
+            <td><!--ik2 kit1 ap1 om2 / 二百四三-->
+                <script>print("二百四三", 16)</script>
+            </td>
             <td><img src="243.png" height="80" onclick="play(243)"></td>
         </tr>
     </table>
@@ -115,7 +134,107 @@
 
     <hr>
 
+    <table>
+        <tr>
+            <td><!---->
+                <script>print("「一」", 16)</script>
+            </td>
+            <td><img src="128.png" height="106" onclick="play(128)"></td>
+        </tr>
+        <tr>
+            <td><!--kit1 ap1 nun1 ap1 / 百四十四-->
+                <script>print("「二」", 16)</script>
+            </td>
+            <td><img src="144.png" height="106" onclick="play(144)"></td>
+        </tr>
+        <tr>
+            <td><!--kit1 net2 nun1 ik2 / 百六十二-->
+                <script>print("「三」", 16)</script>
+            </td>
+            <td><img src="162.png" height="80" onclick="play(162)"></td>
+        </tr>
+        <tr>
+            <td><!--kit1 nap1 nun1 ik2 / 百九十二-->
+                <script>print("「四」", 16)</script>
+            </td>
+            <td><img src="192.png" height="106" onclick="play(192)"></td>
+        </tr>
+        <tr>
+            <td><!--ik2 kit1 nun1 net2 / 二百十六-->
+                <script>print("「五」", 16)</script>
+            </td>
+            <td><img src="216.png" height="106" onclick="play(216)"></td>
+        </tr>
+        <tr>
+            <td><!--ik2 kit1 ap1 om2 / 二百四三-->
+                <script>print("「六」", 16)</script>
+            </td>
+            <td><img src="243.png" height="80" onclick="play(243)"></td>
+        </tr>
+    </table>
+
+    <hr>
+    <script>print("汝等耳識終震値", 16)</script>
+    <br>
+    <script>print("目糸即如何", 16)</script>
+    <hr>
+    <script>print("此亦此「一」之糸", 16)</script>
+
+    <hr>
+
     <img src="sqrt2.png" height="154">
+    <hr>
+
+    <table>
+        <tr>
+            <td>
+                <script>print("一␣ret", 16);</script>
+            </td>
+            <td>⇀&nbsp;
+                <script>print("␣叮␣teri", 16);</script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <script>print("二␣rik", 16);</script>
+            </td>
+            <td>⇀&nbsp;
+                <script>print("␣男␣kir", 16);</script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <script>print("三␣rom", 16);</script>
+            </td>
+            <td>⇀&nbsp;
+                <script>print("␣米␣mor", 16);</script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <script>print("四␣arp", 16);</script>
+            </td>
+            <td>⇀&nbsp;
+                <script>print("␣犬␣pra", 16);</script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <script>print("五␣urn", 16);</script>
+            </td>
+            <td>⇀&nbsp;
+                <script>print("␣猫␣nre", 16);</script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <script>print("六␣nret", 16);</script>
+            </td>
+            <td>⇀&nbsp;
+                <script>print("␣混␣tern", 16);</script>
+            </td>
+        </tr>
+    </table>
     <hr>
 
     <img src="aum2.png" height="198">
